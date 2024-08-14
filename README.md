@@ -1,2 +1,3 @@
-Things to add to the website.
-Banner at the top of the page with our name in the corner using the font Oxanium
+<h1>Homepage branch readme</h1>
+
+<p>im going to make a bunch of edits then merge with the main branch and put the mantiance page somewhere else incase we need it (hopefully not)</p>
