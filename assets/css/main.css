@@ -8,8 +8,8 @@
 */
 
 :root {
-	--accent: #899caa;
-	--box-colour: #00000080
+	--accent: #668fac;
+	--box-colour: #000000b0
 }
 
 /* Reset */
@@ -23,9 +23,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline;
 }
 
-.image.fit img {
-	width: 100%;
-	height: auto;
+.content i {
+    margin-top: 0; /* Remove or reduce the top margin of the trophy icon */
+    display: inline; /* Ensure it aligns closely */
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -2741,7 +2741,7 @@ section.special, article.special {
 
 header p {
 	position: relative;
-	margin: 0 0 1.5em 0;
+	margin: 0 0 0.5em 0;
 }
 
 header h2+p {
