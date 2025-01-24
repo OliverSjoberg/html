@@ -1692,7 +1692,7 @@ em, i {
 p {
 	margin: 0 0 2em 0;
 	text-align: center;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	font-family: Oxanium;
 	font-weight: 400;
 }
 
@@ -3610,7 +3610,7 @@ body.subpage {
 	right: 0;
 	text-align: right;
 	top: 0;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 	width: 7em;
 }
 
@@ -3687,6 +3687,7 @@ body.subpage {
 	position: relative;
 	text-align: center;
 	overflow: hidden;
+	filter: grayscale(0%) brightness(100%);
 }
 
 #banner .inner {
@@ -4741,6 +4742,7 @@ body.is-loading #banner:before {
 
 .inThrees {
     display: flex;
+	
 }
 
 .inThrees img {
