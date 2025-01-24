@@ -6,6 +6,10 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+@font-face {
+	font-family: Oxanium;
+	src: /fonts/Oxanium-VariableFont_wght.ttf;
+}
 
 :root {
 	--accent: #668fac;
@@ -1627,7 +1631,7 @@ body {
 }
 
 body, input, select, textarea {
-	font-family: "Oxanium", Arial, Helvetica, sans-serif;
+	font-family: "Oxanium";
 	font-size: 13pt;
 	font-weight: 300;
 	line-height: 1.65;
@@ -3710,7 +3714,7 @@ body.subpage {
 	line-height: 1.1;
 	letter-spacing: 0.075em;
 	text-transform: uppercase;
-	font-family: "Oxanium", Helvetica, sans-serif;
+	font-family: "Oxanium";
 	margin-bottom: .25em;
 	color: rgba(255, 255, 255, 0.75);
 }
