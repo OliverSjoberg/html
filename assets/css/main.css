@@ -1,18 +1,19 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-
 /*
 	Road Trip by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 @font-face {
-	font-family: Oxanium;
-	src: /fonts/Oxanium-VariableFont_wght.ttf;
+	font-family: 'Oxanium';
+	src: url(/fonts/Oxanium-VariableFont_wght.ttf) format('truetype');
+	font-weight: normal;
+    font-style: normal;
 }
 
 :root {
-	--accent: #668fac;
+	--accent: #000a0c;
 	--box-colour: #000000b0
 }
 
