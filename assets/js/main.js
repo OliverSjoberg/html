@@ -1,27 +1,24 @@
 /*
-	Road Trip by TEMPLATED
+	Projection by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
 (function($) {
 
-	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
-	});
+	// Breakpoints.
+		skel.breakpoints({
+			xlarge:	'(max-width: 1680px)',
+			large:	'(max-width: 1280px)',
+			medium:	'(max-width: 980px)',
+			small:	'(max-width: 736px)',
+			xsmall:	'(max-width: 480px)'
+		});
 
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$banner = $('#banner');
-
-		var $height = $('#header').height();
+			$body = $('body');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -32,9 +29,6 @@
 				}, 100);
 			});
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
 				$.prioritize(
@@ -43,75 +37,15 @@
 				);
 			});
 
-		// Banner
+	// Off-Canvas Navigation.
 
-			if ($banner.length > 0) {
-
-				// IE: Height fix.
-					if (skel.vars.browser == 'ie'
-					&&	skel.vars.IEVersion > 9) {
-
-						skel.on('-small !small', function() {
-							$banner.css('height', '100vh');
-						});
-
-						skel.on('+small', function() {
-							$banner.css('height', '');
-						});
-
-					}
-
-				// More button.
-					$banner.find('.more')
-						.addClass('scrolly');
-
-			}
-
-
-		// Get BG Image
-
-			if ( $( ".bg-img" ).length ) {
-
-				$( ".bg-img" ).each(function() {
-
-					var post 	= $(this),
-						bg 		= post.data('bg');
-
-					post.css( 'background-image', 'url(images/' + bg + ')' );
-
-				});
-
-
-			}
-
-		// Posts
-
-			$( ".post" ).each( function() {
-				var p = $(this),
-					i = p.find('.inner'),
-					m = p.find('.more');
-
-				m.addClass('scrolly');
-
-				p.scrollex({
-					top: '40vh',
-					bottom: '40vh',
-					terminate: 	function() { m.removeClass('current'); i.removeClass('current'); },
-					enter: 		function() { m.addClass('current'); i.addClass('current'); },
-					leave: 		function() { m.removeClass('current'); i.removeClass('current'); }
-				});
-
-			});
-
-		// Scrolly.
-			if ( $( ".scrolly" ).length ) {
-
-				$('.scrolly').scrolly();
-			}
-
-		// Menu.
-			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
+		// Navigation Panel.
+			$(
+				'<div id="navPanel">' +
+					$('#nav').html() +
+					'<a href="#navPanel" class="close"></a>' +
+				'</div>'
+			)
 				.appendTo($body)
 				.panel({
 					delay: 500,
@@ -119,8 +53,13 @@
 					hideOnSwipe: true,
 					resetScroll: true,
 					resetForms: true,
-					side: 'right'
+					side: 'left'
 				});
+
+		// Fix: Remove transitions on WP<10 (poor/buggy performance).
+			if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+				$('#navPanel')
+					.css('transition', 'none');
 
 	});
 
