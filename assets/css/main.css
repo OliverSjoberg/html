@@ -1639,7 +1639,7 @@
 
 	a {
 		/* FONT AWESOME ICON COLOR */
-		color: #ffffff;
+		color: #00D9C5;
 		text-decoration: underline;
 		size: 100em;
 	}
@@ -2239,6 +2239,9 @@
 
 		.image.round img {
 			border-radius: 5%;
+			  display: block;
+  			  margin-left: auto;
+  			  margin-right: auto;
 		}
 
 		.image.left {
@@ -2710,10 +2713,10 @@
 	}
 
 		.subpage #header {
-			background: #000000;
+			background: #bd1818;
 			top: 0;
-			height: 80px;
-			line-height: 80px;
+			height: 60px;
+			line-height: 60px;
 			position: fixed;
 		}
 
@@ -2950,7 +2953,7 @@
 		}
 
 		#banner .inner {
-			border-top: 2px solid rgba(0, 0, 0, 0.603);
+			border-top: 3px solid #001113;
 			position: relative;
 			z-index: 10005;
 			padding-top: 10em;
@@ -3124,43 +3127,43 @@
 
 	#footer {
 		padding: 4em 0;
-		background: #000000;
+		background: #000e0f;
 		color: #fff;
 		text-align: center;
 	}
 
 		#footer h3 {
-			color: #ffffff;
+			color: #00D9C5;
 			margin-bottom: 2em !important;
 		}
 
 		#footer p {
-			color: #ffffff;
+			color: #00D9C5;
 		}
 
 		#footer p a {
-			color: #ffffff;
+			color: #00D9C5;
 		}
 
 		#footer label {
 			text-align: left;
-			color: #FFF;
+			color: #00D9C5;
 		}
 
 		#footer .copyright {
-			color: rgba(255, 255, 255, 0.5);
+			color: #00D9C5;
 			font-size: 0.8em;
 			margin: 0 0 2em 0;
 			padding: 0;
 		}
 
 			#footer .copyright a {
-				color: rgba(255, 255, 255, 0.5);
+				color: #00756acc;
 				text-decoration: none;
 			}
 
 				#footer .copyright a:hover {
-					color: #FFF;
+					color: #009e8ecc;
 				}
 
 		@media screen and (max-width: 980px) {
